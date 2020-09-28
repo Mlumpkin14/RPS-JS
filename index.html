@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+        // function playRound plays a single round of the game
+
+        console.log("Welcome to the Rock Paper Scissors game.");
+        console.log("---------------------");
+
+
+        let i = 0;
+
+        function game() {
+            while (i < 5) {
+
+
+                let playerSelection = prompt("Rock, Paper, or Scissors? ");
+
+                if (playerSelection == computerPlay) {
+                    return "Its a tie";
+                }
+                if (playerSelection == 'paper' || 'Paper') {
+                    if (computerPlay == 'scissors' || 'Scissors') {
+                        return 'You Win!';
+                    } else {
+                        return 'You lose! Try again';
+                    }
+                    i++;
+                }
+                if (playerSelection == 'Paper' || 'paper') {
+                    if (computerPlay == 'Rock' || 'rock') {
+                        return 'You win!';
+                    } else {
+                        return 'You lose, Try again';
+                    }
+                    i++;
+                }
+                if (playerSelection == 'scissors' || 'Scissors') {
+                    if (computerPlay == 'rock' || 'Rock') {
+                        return 'You win!';
+                    } else {
+                        return 'You lose, Try again';
+                    }
+
+                    i++;
+                }
+
+
+
+                function computerPlay() {
+                    switch (Math.floor(Math.random() * 3)) {
+                        case 0:
+                            return 'rock' || 'Rock';
+                            break;
+                        case 1:
+                            return 'scissors' || 'Scissors';
+                            break;
+                        case 2:
+                            return 'paper' || 'Paper';
+                            break;
+                    }
+
+                }
+
+            }
+        }
+
+        
+
+    </script>
+</body>
+
+</html>
